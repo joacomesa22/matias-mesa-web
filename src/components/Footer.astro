@@ -1,0 +1,66 @@
+<footer class="footer">
+  <div class="logo">
+    <a href="/"><img src="./img/logo.png" alt="logo" /></a>
+  </div>
+  <div class="footer__social">
+    <a href="https://www.instagram.com/mats_mess/" target="_blank"
+      ><i class="fa-brands fa-square-instagram"></i></a
+    >
+    <a href="https://www.facebook.com/mats.mess" target="_blank"
+      ><i class="fa-brands fa-square-facebook"></i></a
+    >
+    <a
+      href="https://www.imdb.com/name/nm0581764/?ref_=fn_al_nm_1"
+      target="_blank"><i class="fa-brands fa-imdb"></i></a
+    >
+  </div>
+  <p class="footer__copy">&copy; Copyright Matias Mesa 2022</p>
+</footer>
+
+<style lang="scss">
+  // Footer
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacer--md);
+    background-color: var(--colorDark);
+    background-image: url(../img/black-twill.png);
+    &__social {
+      display: flex;
+      gap: var(--spacer--sm);
+      i {
+        font-size: 2rem;
+        transition: var(--transition);
+        cursor: pointer;
+
+        &:hover {
+          transform: translateY(-4px);
+        }
+      }
+    }
+    &__copy {
+      font-size: 0.8rem;
+    }
+  }
+  .logo {
+    justify-self: center;
+    max-width: 220px;
+    transition: var(--transition);
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+  .logo img {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 890px) {
+    // Footer
+    .footer {
+      flex-direction: column;
+      text-align: center;
+      gap: var(--spacer--md);
+    }
+  }
+</style>

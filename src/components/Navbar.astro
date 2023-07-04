@@ -1,0 +1,191 @@
+<header class="header-container" id="header">
+  <div class="logo">
+    <a href="/"><img src="./img/logo.png" alt="logo" /></a>
+  </div>
+  <nav class="nav">
+    <a href="/commercials" class="nav__link">Commercials</a>
+    <a href="/movies" class="nav__link">Movies</a>
+    <a href="/equipment" class="nav__link">Equipment</a>
+  </nav>
+  <div class="nav-right">
+    <p class="nav-right__info">ADF-SOC</p>
+    <div class="btn">
+      <span class="btn__line1"></span>
+      <span class="btn__line2"></span>
+      <span class="btn__line3"></span>
+    </div>
+  </div>
+</header>
+
+<style lang="scss">
+  .header-container {
+    padding: var(--spacer--sm);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    font-family: var(--fontTitles);
+    transition: all 0.3s;
+  }
+  .logo {
+    justify-self: center;
+    max-width: 220px;
+    transition: var(--transition);
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  .header__bg {
+    background-color: var(--colorDark);
+    background-image: url(../img/black-twill.png);
+    border-bottom: 1px solid var(--colorLight);
+  }
+
+  .logo img {
+    width: 100%;
+  }
+  .btn {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: none;
+    padding-top: 0.2px;
+    span {
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: var(--colorLight);
+      margin-top: 6px;
+      transform-origin: 0px 100%;
+      transition: all 300ms;
+    }
+    &__line1-active {
+      transform: rotate(45deg) translate(-3px, 2px);
+    }
+    &__line2-active {
+      opacity: 0;
+      margin-right: 30px;
+    }
+    &__line3-active {
+      transform: rotate(-45deg) translate(-3px, 1px);
+    }
+  }
+
+  .nav {
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    gap: var(--spacer--sm);
+    &__link {
+      margin-top: 8px;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      &::after {
+        content: "";
+        display: block;
+        background: var(--colorLight);
+        width: 100%;
+        height: 1.3px;
+        clip-path: var(--clippy);
+        transition: var(--transition);
+      }
+      &:hover {
+        --clippy: polygon(0 0, 100% 0, 100% 99%, 0 100%);
+      }
+    }
+  }
+
+  .nav-right {
+    align-self: center;
+    justify-self: center;
+
+    &__info {
+      color: #db0200;
+      text-shadow: var(--text--shadow-a);
+    }
+  }
+
+  @media screen and (max-width: 890px) {
+    // Nav
+    .header-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .btn {
+      display: block;
+    }
+
+    .nav {
+      position: fixed;
+      right: -100%;
+      gap: 0;
+      top: 0;
+      flex-direction: column;
+      background-color: var(--colorDark);
+      background-image: url(../img/black-twill.png);
+      width: 100%;
+      height: 100vh;
+      text-align: center;
+      transition: var(--transition);
+      justify-content: space-evenly;
+
+      &__link {
+        font-size: var(--fontM);
+      }
+    }
+
+    .nav-right__info {
+      display: none;
+    }
+
+    .nav.active {
+      right: 0;
+    }
+  }
+</style>
+
+<script>
+  // Funcionalidad Barras
+  const btnMenu = document.querySelector(".btn");
+  const navMenu = document.querySelector(".nav");
+
+  btnMenu.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+
+  document.querySelectorAll(".nav__link").forEach((link) =>
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+    })
+  );
+
+  // Animacion Barras
+  document.querySelector(".btn").addEventListener("click", animacionBarras);
+
+  let line1 = document.querySelector(".btn__line1");
+  let line2 = document.querySelector(".btn__line2");
+  let line3 = document.querySelector(".btn__line3");
+
+  function animacionBarras() {
+    line1.classList.toggle("btn__line1-active");
+    line2.classList.toggle("btn__line2-active");
+    line3.classList.toggle("btn__line3-active");
+  }
+
+  // Navbar Scroll Bg
+  window.addEventListener("scroll", headerBg);
+  function headerBg() {
+    const header = document.querySelector("#header");
+    const scrollVal = window.scrollY;
+    if (scrollVal > 700) {
+      header.classList.add("header__bg");
+    } else {
+      header.classList.remove("header__bg");
+    }
+  }
+</script>

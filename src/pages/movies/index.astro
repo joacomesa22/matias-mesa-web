@@ -1,0 +1,48 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { movies } from "./movies";
+---
+
+<Layout title="Matías Mesa - Movies">
+  <section class="hero-movies hero">
+    <h1>Movies</h1>
+  </section>
+
+  <section class="portfolio" id="movies">
+    {
+      movies.map((mov) => {
+        return (
+          <div class="portfolio__card">
+            <a href={mov.link} target="_blank">
+              <div class="portfolio__card-img">
+                <img src={mov.img} alt="${mov.title.toLowerCase()}" />
+              </div>
+              <div class="portfolio__card-text">
+                <h4>{mov.title}</h4>
+                <p>{mov.prod != "" ? "Prod: " + mov.prod : ""}</p>
+                <p>{mov.dir != "" ? "Dir: " + mov.dir : ""}</p>
+                <p>{mov.dp != "" ? "DP: " + mov.dp : ""}</p>
+              </div>
+            </a>
+          </div>
+        );
+      })
+    }
+  </section>
+</Layout>
+
+<style lang="scss">
+  // Hero
+  .hero-movies {
+    background-position: top;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url(../img/steady-palmeras.jpg);
+  }
+</style>

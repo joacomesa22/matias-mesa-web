@@ -1,81 +1,147 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+<Layout title="Matías Mesa - Home">
+  <section class="hero-index hero">
+    <div class="hero-index__container">
+      <div class="hero-index__container-texto">
+        <h4>ADF-SOC</h4>
+        <h1>Matias Mesa</h1>
+        <p>Steadicam Operator / Underwater Camera Operator</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="work-container">
+    <div class="work">
+      <div class="work__card">
+        <a href="./pages/commercials.html" class="work__card-img">
+          <img src="./img/steady-desierto.jpg" alt="" />
+          <h2>Commercials</h2>
+        </a>
+      </div>
+      <div class="work__card">
+        <a href="./pages/movies.html" class="work__card-img"
+          ><img src="./img/steady.jpeg" alt="" />
+          <h2>Movies</h2>
+        </a>
+      </div>
+      <div class="work__card">
+        <a href="./pages/equipment.html" class="work__card-img"
+          ><img src="./img/desierto2.jpg" alt="" />
+          <h2>Equipment</h2>
+        </a>
+      </div>
+    </div>
+  </section>
 </Layout>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+<style lang="scss">
+  // Hero
+  .hero-index {
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url(../img/facha.jpg);
+
+    .hero-index__container {
+      width: 80%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      &-texto {
+        position: fixed;
+        h4 {
+          padding-left: 4px;
+          color: #db0200;
+          text-shadow: var(--text--shadow-a);
+        }
+        p {
+          padding-left: 4px;
+          text-shadow: var(--text--shadow-a);
+        }
+      }
+    }
+  }
+
+  // Work
+  .work-container {
+    background-color: var(--colorDark);
+    background-image: url(../img/black-twill.png);
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacer--sm);
+    border-top: var(--border);
+    border-bottom: var(--border);
+    z-index: 1;
+    position: relative;
+
+    .work {
+      gap: var(--spacer--sm);
+      display: flex;
+      width: 100%;
+      height: 100%;
+      &__card {
+        width: 0px;
+        flex-grow: 1;
+        transition: 0.5s ease;
+        position: relative;
+        overflow: hidden;
+        &:hover {
+          cursor: pointer;
+          width: 300px;
+        }
+        &-img {
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+            transition: 0.5s ease;
+
+            &:hover {
+              opacity: 1;
+              filter: contrast(110%);
+            }
+          }
+        }
+        h2 {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-shadow: var(--text--shadow-b);
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 890px) {
+    // Work
+    .work-container {
+      height: 100vh;
+      .work {
+        flex-direction: column;
+        &__card {
+          width: 100%;
+          height: 0;
+          &:hover {
+            height: 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 </style>
