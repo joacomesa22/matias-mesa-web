@@ -1,14 +1,16 @@
 <header class="header-container" id="header">
   <div class="logo">
     <a href="/"><img src="./img/logo.png" alt="logo" /></a>
+    <span>ADF-SOC</span>
   </div>
   <nav class="nav">
     <a href="/commercials" class="nav__link">Commercials</a>
     <a href="/movies" class="nav__link">Movies</a>
+    <a href="/underwater" class="nav__link">Underwater</a>
     <a href="/equipment" class="nav__link">Equipment</a>
+    <a href="/featured" class="nav__link">Featured</a>
   </nav>
   <div class="nav-right">
-    <p class="nav-right__info">ADF-SOC</p>
     <div class="btn">
       <span class="btn__line1"></span>
       <span class="btn__line2"></span>
@@ -19,9 +21,9 @@
 
 <style lang="scss">
   .header-container {
-    padding: var(--spacer--sm);
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacer--sm) var(--spacer--md);
     position: fixed;
     width: 100%;
     z-index: 2;
@@ -29,11 +31,20 @@
     transition: all 0.3s;
   }
   .logo {
-    justify-self: center;
-    max-width: 220px;
-    transition: var(--transition);
-    &:hover {
-      transform: scale(1.02);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    a {
+      img {
+        max-width: 180px;
+      }
+    }
+    span {
+      color: #ff1a16;
+      text-shadow: var(--text--shadow-a);
+      font-size: var(--fontS);
+      font-weight: 600;
     }
   }
 
@@ -50,7 +61,6 @@
     cursor: pointer;
     width: 30px;
     height: 30px;
-    display: none;
     padding-top: 0.2px;
     span {
       display: block;
@@ -74,13 +84,12 @@
   }
 
   .nav {
-    justify-self: center;
     display: flex;
     align-items: center;
     gap: var(--spacer--sm);
     &__link {
       margin-top: 8px;
-      font-size: 1.2rem;
+      font-size: var(--fontXS);
       text-transform: uppercase;
       font-weight: 600;
       &::after {
@@ -88,7 +97,7 @@
         display: block;
         background: var(--colorLight);
         width: 100%;
-        height: 1.3px;
+        height: 2px;
         clip-path: var(--clippy);
         transition: var(--transition);
       }
@@ -99,24 +108,17 @@
   }
 
   .nav-right {
-    align-self: center;
-    justify-self: center;
-
-    &__info {
-      color: #db0200;
-      text-shadow: var(--text--shadow-a);
-    }
+    display: none;
   }
 
-  @media screen and (max-width: 890px) {
+  @media screen and (max-width: 900px) {
     // Nav
     .header-container {
       display: flex;
-      justify-content: space-around;
       align-items: center;
     }
 
-    .btn {
+    .nav-right {
       display: block;
     }
 
@@ -137,10 +139,6 @@
       &__link {
         font-size: var(--fontM);
       }
-    }
-
-    .nav-right__info {
-      display: none;
     }
 
     .nav.active {
@@ -182,7 +180,7 @@
   function headerBg() {
     const header = document.querySelector("#header");
     const scrollVal = window.scrollY;
-    if (scrollVal > 700) {
+    if (scrollVal > 400) {
       header.classList.add("header__bg");
     } else {
       header.classList.remove("header__bg");

@@ -1,20 +1,20 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { movies } from "./movies";
-import { Gallery } from "../../components/Gallery";
+import { Gallery2 } from "../../components/Gallery2";
+import { featured } from "./featured";
 ---
 
-<Layout title="Matías Mesa - Movies">
-  <section class="hero-movies hero">
-    <h1>Movies</h1>
+<Layout title="Matias Mesa - Featured">
+  <section class="hero-featured hero">
+    <h1>Featured</h1>
   </section>
-  <Gallery content={movies} client:load />
+  <Gallery2 content={featured} client:load />
 </Layout>
 
 <style lang="scss">
   // Hero
-  .hero-movies {
-    background-position: top;
+  .hero-featured {
+    background-position: right;
     display: flex;
     align-items: center;
     justify-content: start;
@@ -24,7 +24,7 @@ import { Gallery } from "../../components/Gallery";
         rgba(0, 0, 0, 0.4),
         rgba(0, 0, 0, 0.4)
       ),
-      url(../img/steady-palmeras.jpg);
+      url(../img/helicoptero.jpg);
 
     h1 {
       font-size: var(--fontXXL);

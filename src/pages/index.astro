@@ -6,35 +6,34 @@ import Layout from "../layouts/Layout.astro";
   <section class="hero-index hero">
     <div class="hero-index__container">
       <div class="hero-index__container-texto">
-        <h4>ADF-SOC</h4>
         <h1>Matias Mesa</h1>
-        <p>Steadicam Operator / Underwater Camera Operator</p>
+        <p>Steadicam | Trinity 2 | Underwater Camera Specialist</p>
       </div>
     </div>
   </section>
 
-  <section class="work-container">
+  <!-- <section class="work-container">
     <div class="work">
       <div class="work__card">
-        <a href="./pages/commercials.html" class="work__card-img">
+        <a href="/commercials" class="work__card-img">
           <img src="./img/steady-desierto.jpg" alt="" />
           <h2>Commercials</h2>
         </a>
       </div>
       <div class="work__card">
-        <a href="./pages/movies.html" class="work__card-img"
+        <a href="/movies" class="work__card-img"
           ><img src="./img/steady.jpeg" alt="" />
           <h2>Movies</h2>
         </a>
       </div>
       <div class="work__card">
-        <a href="./pages/equipment.html" class="work__card-img"
-          ><img src="./img/desierto2.jpg" alt="" />
-          <h2>Equipment</h2>
+        <a href="/underwater" class="work__card-img"
+          ><img src="./img/agua-chroma.jpg" alt="" />
+          <h2>Underwater</h2>
         </a>
       </div>
     </div>
-  </section>
+  </section> -->
 </Layout>
 
 <style lang="scss">
@@ -45,6 +44,7 @@ import Layout from "../layouts/Layout.astro";
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
     background-image: linear-gradient(
         0deg,
         rgba(0, 0, 0, 0.2),
@@ -53,21 +53,25 @@ import Layout from "../layouts/Layout.astro";
       url(../img/facha.jpg);
 
     .hero-index__container {
-      width: 80%;
+      width: 90%;
       height: 100%;
       display: flex;
       align-items: center;
       justify-content: flex-start;
+
       &-texto {
         position: fixed;
-        h4 {
-          padding-left: 4px;
-          color: #db0200;
-          text-shadow: var(--text--shadow-a);
+        padding: var(--spacer--sm);
+
+        h1 {
+          font-size: var(--fontXXL2);
         }
+
         p {
           padding-left: 4px;
           text-shadow: var(--text--shadow-a);
+          margin-top: 4px;
+          font-size: var(--fontM);
         }
       }
     }
@@ -142,6 +146,12 @@ import Layout from "../layouts/Layout.astro";
           }
         }
       }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .hero-index__container-texto {
+      text-align: center;
     }
   }
 </style>

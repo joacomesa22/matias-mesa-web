@@ -1,73 +1,140 @@
 export const commercials = [
   {
+    id: 1,
     title: "Wohninvest 'End of Decadence'",
-    prod: "Bonaparte Films Berlin",
-    dir: "Nico Kreis",
+    img: "./img/wohninvest.jpg",
+    link: "https://www.youtube.com/watch?v=pRAYAtqBi4Q?mute=0",
   },
   {
+    id: 2,
     title: "Momondo",
-    prod: "Lomo",
-    dir: "Sebastian Blenkov",
+    img: "./img/momondo.jpg",
+    link: "https://www.youtube.com/watch?v=7qKWBNYMBi8?mute=0",
   },
   {
+    id: 3,
     title: "Pepsi black... So what",
-    prod: "Primo",
-    dir: "Nico Perez Veiga",
+    img: "./img/pepsi-black.jpg",
+    link: "https://www.youtube.com/watch?v=jqFMqNUJ5Cg?mute=0",
   },
   {
+    id: 4,
     title: "VW Duality",
-    prod: "Primo",
-    dir: "Nico Perez veiga",
+    img: "./img/vw-duality.jpg",
+    link: "https://www.youtube.com/watch?v=EvI3j4Gwzm4?mute=0",
   },
   {
-    title: "Revlon",
-    prod: "a WHITELABEL product",
-    dir: "Darius Khondji",
+    id: 5,
+    title: "Star Wars",
+    img: "./img/star-wars.jpg",
+    link: "https://www.youtube.com/watch?v=IA0nudw3DAs?mute=0",
   },
   {
-    title: "Target",
-    prod: "a WHITELABEL product",
-    dir: "Darius Khondji",
+    id: 6,
+    title: "Retreat",
+    img: "./img/retreat.jpg",
+    link: "https://www.youtube.com/watch?v=ZoMxqTz02_g&t=4s?mute=0",
   },
   {
-    title: "Prudential",
-    prod: "Brainwash",
-    dir: "Carlos Veron",
+    id: 7,
+    title: "Personal Fest",
+    img: "./img/personal-fest.jpg",
+    link: "https://www.youtube.com/watch?v=IANiK_3O5LI?mute=0",
   },
   {
-    title: "Ford",
-    prod: "La DobleA",
-    dir: "Esteban Sapir",
+    id: 8,
+    title: "Dow Bread",
+    img: "./img/dow-bread.jpg",
+    link: "https://www.youtube.com/watch?v=AIR59-kzdLE?mute=0",
   },
   {
-    title: "Clarin",
-    prod: "Rebolucion",
-    dir: "Lemon",
+    id: 9,
+    title: "Apple Music",
+    img: "./img/apple.jpg",
+    link: "https://www.youtube.com/watch?v=IZG2Han29xM?mute=0",
   },
   {
-    title: "Coke Lift",
-    prod: "Rebolucion",
-    dir: "Armando Bo",
+    id: 10,
+    title: "Levis",
+    img: "./img/levis.jpg",
+    link: "https://www.youtube.com/watch?v=jes_vd4XHiw?mute=0",
   },
   {
-    title: "AFP Popular",
-    prod: "Banana Films",
-    dir: "Maria Jorda",
+    id: 11,
+    title: "Nike",
+    img: "./img/nike.jpg",
+    link: "https://www.youtube.com/watch?v=iO8a4m69pyo?mute=0",
+  },
+  {
+    id: 12,
+    title: "Orange Belonging",
+    img: "./img/belonging.jpg",
+    link: "https://www.youtube.com/watch?v=y4qSfEbK49Q?mute=0",
+  },
+  {
+    id: 13,
+    title: "Orange Iluminations",
+    img: "./img/iluminations.jpg",
+    link: "https://www.youtube.com/watch?v=lTJrw5Y89NA?mute=0",
+  },
+  {
+    id: 14,
+    title: "Fastweb",
+    img: "./img/fastweb.jpg",
+    link: "https://www.youtube.com/watch?v=Org79PUmRp4?mute=0",
+  },
+  {
+    id: 15,
+    title: "Blue Light",
+    img: "./img/blue.jpg",
+    link: "https://www.youtube.com/watch?v=FqVPrbAHt-s?mute=0",
+  },
+  {
+    id: 16,
+    title: "Villavicencio",
+    img: "./img/villavicencio.jpg",
+    link: "https://www.youtube.com/watch?v=EbUr5gg7WvM?mute=0",
+  },
+  // {
+  // id: 17,
+  //   title: "HP Colours",
+  //   img: "./img/",
+  //   link: "https://www.youtube.com/watch?v=jet7_LEC4Sw?mute=0",
+  // },
+  {
+    id: 18,
+    title: "Samsung S23",
+    img: "./img/samsung.jpg",
+    link: "https://www.youtube.com/watch?v=N4TB4qTH728?mute=0",
+  },
+  {
+    id: 19,
+    title: "Movistar Riders",
+    img: "./img/movistar.jpg",
+    link: "https://www.youtube.com/watch?v=sJvyH-YuEDs?mute=0",
+  },
+  {
+    id: 20,
+    title: "The Race Naked",
+    img: "./img/race.jpg",
+    link: "https://www.youtube.com/watch?v=vauQEC_hv80?mute=0",
+  },
+  {
+    id: 21,
+    title: "H&M",
+    img: "./img/hym.jpg",
+    link: "https://www.youtube.com/watch?v=t-ioZDeER-s?mute=0",
+  },
+  {
+    id: 22,
+    title: "Guiness Tipping",
+    img: "./img/guiness.jpg",
+    link: "https://www.youtube.com/watch?v=Zz3IN3YXUpU?mute=0",
+  },
+  {
+    id: 23,
+    title: "Pepsi",
+    img: "./img/pepsi2.jpg",
+    link: "https://www.youtube.com/watch?v=3tZsS108hdg?mute=0",
   },
 ];
-
-//   const commercialsContainer = document.querySelector("#commercials");
-
-//   commercials.forEach((comm) => {
-//     let commCard = document.createElement("div");
-//     commCard.classList.add("portfolio__card");
-//     commCard.innerHTML = `
-//           <div class="portfolio__card-comm">
-//               <h4>${comm.title}</h4>
-//               <p>${comm.prod != "" ? "Prod: " + comm.prod : ""}</p>
-//               <p>${comm.dir != "" ? "Dir: " + comm.dir : ""}</p>
-//           </div>
-
-//       `;
-//     commercialsContainer.appendChild(commCard);
-//   });
