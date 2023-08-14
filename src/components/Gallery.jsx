@@ -4,8 +4,8 @@ import "lightgallery/css/lg-thumbnail.css";
 import "lightgallery/css/lg-video.css";
 
 import LightGallery from "lightgallery/react/Lightgallery.umd";
-import lgThumbnail from "lightgallery/plugins/thumbnail";
-import lgVideo from "lightgallery/plugins/video";
+import lgThumbnail from "lightgallery/plugins/thumbnail/lg-thumbnail.umd";
+import lgVideo from "lightgallery/plugins/video/lg-video.umd";
 
 export const Gallery = ({ content }) => {
   return (
