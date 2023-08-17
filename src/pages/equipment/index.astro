@@ -6,8 +6,72 @@ import Layout from "../../layouts/Layout.astro";
   <div class="hero-equipment hero">
     <h1>Equipment</h1>
   </div>
-  <div class="hero-underwater hero">
-    <h1>Underwater Equipment</h1>
+  <div class="equipment">
+    <div class="equipment__top">
+      <div class="equipment__top-t">
+        <img src="./img/trinity2.jpg" alt="trinity" />
+        <img src="./img/trinity1.jpg" alt="trinit" />
+      </div>
+      <div class="equipment__top-x">
+        <h3>XCS Ultimate 3 with Volt</h3>
+      </div>
+    </div>
+    <div class="equipment__mid">
+      <div class="equipment__mid-text">
+        <h3>Stabilized Remote Head SRH 360</h3>
+        <ul>
+          <li>Open architecture can fit most cameras and lenses</li>
+          <li>Wireless</li>
+          <li>Wheels</li>
+          <li>Pan Bar</li>
+          <li>Very Powerful</li>
+          <li>Very lightweight (11kg)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="equipment__bottom">
+      <div class="equipment__bottom-card">
+        <h3>PRO Arm</h3>
+        <img src="./img/titan.jpg" alt="pro arm" />
+      </div>
+      <div class="equipment__bottom-card">
+        <h3>Gyros</h3>
+        <img src="./img/gyros.jpeg" alt="gyros" />
+      </div>
+    </div>
+  </div>
+  <div class="hero-underwater">
+    <h2>Underwater Housings</h2>
+  </div>
+  <div>
+    <div>
+      <img src="#" alt="#" />
+      <img src="#" alt="#" />
+      <img src="#" alt="#" />
+    </div>
+    <div>
+      <div>
+        <h3>Cameras we support:</h3>
+        <ul>
+          <li>ARRI ALEXA 35</li>
+          <li>ARRI ALEXA MINI LF</li>
+          <li>ARRI ALEXA MINI</li>
+          <li>VENICE 1 & 2</li>
+          <li>Phantom</li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li>Full Camera Surface control</li>
+          <li>Surface Lens Control (Preston/Hi5)</li>
+          <li>Surface Video feed</li>
+          <li>Dome and Flat Ports</li>
+          <li>Wide lens choice</li>
+          <li>Underwater Communication</li>
+          <li>Underwater Lights (Par 1.2 and Underwater Astera Titans)</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </Layout>
 
@@ -15,30 +79,158 @@ import Layout from "../../layouts/Layout.astro";
   .hero-equipment {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    height: 60vh;
     background-position: center;
+    background-size: cover;
     background-image: linear-gradient(
         0deg,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2)
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
       ),
-      url(../img/bazooka.jpg);
+      url(../img/con-camara.jpeg);
+    h1 {
+      font-size: var(--fontXXL);
+      padding-left: var(--spacer--md);
+    }
   }
   .hero-underwater {
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-position: center;
+    justify-content: flex-start;
     height: 50vh;
+    background-size: cover;
+    background-position: center;
     background-image: linear-gradient(
         0deg,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2)
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
       ),
       url(../img/agua-bulgaria.jpg);
 
-    h1 {
-      text-align: center;
+    h2 {
+      font-size: var(--fontXXL);
+      padding-left: var(--spacer--md);
+    }
+  }
+
+  .equipment {
+    background-color: var(--colorDark);
+    background-image: url(../img/black-twill.png);
+    border-top: 1px solid var(--colorLight);
+    border-bottom: 1px solid var(--colorLight);
+    padding: var(--spacer--sm);
+
+    &__top {
+      display: flex;
+      flex-direction: column;
+
+      &-t {
+        display: flex;
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &-x {
+        display: flex;
+        padding: var(--spacer--md);
+        align-items: center;
+        height: 50vh;
+        background-position: bottom;
+        background-size: cover;
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)
+          ),
+          url(../img/xcs.jpg);
+
+        h3 {
+          font-size: var(--fontXL);
+        }
+      }
+    }
+
+    &__mid {
+      height: 65vh;
+      background-size: cover;
+      background-position: bottom;
+      background-image: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.4),
+          rgba(0, 0, 0, 0.4)
+        ),
+        url(../img/srh.jpg);
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      &-text {
+        display: flex;
+        gap: var(--spacer--sm);
+        flex-direction: column;
+        padding: var(--spacer--md);
+
+        h3 {
+          font-size: var(--fontXL);
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 0.4rem;
+
+          li {
+            font-size: var(--fontS);
+          }
+        }
+      }
+    }
+
+    &__bottom {
+      display: flex;
+      &-card {
+        position: relative;
+        width: 50%;
+        h3 {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 2;
+          font-size: var(--fontXL);
+          text-align: center;
+          text-shadow: var(--text--shadow-a);
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          filter: brightness(60%);
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .equipment__top-x {
+      height: 20vh;
+
+      h2 {
+        font-size: var(--fontM);
+      }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .hero-equipment {
+      height: 40vh;
+    }
+
+    .equipment__top-t {
+      flex-wrap: wrap;
     }
   }
 </style>
