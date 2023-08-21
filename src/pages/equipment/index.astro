@@ -140,6 +140,7 @@ import Layout from "../../layouts/Layout.astro";
         display: flex;
         img {
           width: 100%;
+          min-width: 0;
           object-fit: cover;
         }
       }
@@ -239,6 +240,7 @@ import Layout from "../../layouts/Layout.astro";
       gap: var(--spacer--sm);
 
       img {
+        min-width: 0;
         filter: brightness(95%);
         max-width: 400px;
         width: 100%;
