@@ -96,7 +96,7 @@ export const movies = [
     dir: "Andrew Bernstein",
     dp: "Arnau Valls Colomer",
     img: "../img/jack-r.jpg",
-    link: "https://www.youtube.com/watch?v=II06Vwx5Jc4&t=2s?mute=0",
+    link: "https://www.youtube.com/watch?v=Un2zXkM-03U?mute=0",
   },
   {
     id: 12,

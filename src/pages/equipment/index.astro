@@ -16,6 +16,16 @@ import Layout from "../../layouts/Layout.astro";
         <h3>XCS Ultimate 3 with Volt</h3>
       </div>
     </div>
+    <div class="equipment__bottom">
+      <div class="equipment__bottom-card">
+        <h3>PRO Arm</h3>
+        <img src="./img/titan.jpg" alt="pro arm" />
+      </div>
+      <div class="equipment__bottom-card">
+        <h3>Gyros</h3>
+        <img src="./img/gyros.jpg" alt="gyros" />
+      </div>
+    </div>
     <div class="equipment__mid">
       <div class="equipment__mid-text">
         <h3>Stabilized Remote Head SRH 360</h3>
@@ -29,47 +39,48 @@ import Layout from "../../layouts/Layout.astro";
         </ul>
       </div>
     </div>
-    <div class="equipment__bottom">
-      <div class="equipment__bottom-card">
-        <h3>PRO Arm</h3>
-        <img src="./img/titan.jpg" alt="pro arm" />
-      </div>
-      <div class="equipment__bottom-card">
-        <h3>Gyros</h3>
-        <img src="./img/gyros.jpeg" alt="gyros" />
-      </div>
-    </div>
   </div>
   <div class="hero-underwater">
     <h2>Underwater Housings</h2>
   </div>
-  <div>
-    <div>
-      <img src="#" alt="#" />
-      <img src="#" alt="#" />
-      <img src="#" alt="#" />
+  <div class="underwater-equipment">
+    <div class="underwater-equipment__top">
+      <img src="./img/gates-logo.png" alt="gates logo" />
+      <img src="./img/nauticam-logo.png" alt="nauticam logo" />
+      <img src="./img/scubacam-logo.png" alt="scubacam logo" />
     </div>
-    <div>
-      <div>
-        <h3>Cameras we support:</h3>
-        <ul>
-          <li>ARRI ALEXA 35</li>
-          <li>ARRI ALEXA MINI LF</li>
-          <li>ARRI ALEXA MINI</li>
-          <li>VENICE 1 & 2</li>
-          <li>Phantom</li>
-        </ul>
+    <div class="underwater-equipment__bottom">
+      <div class="underwater-equipment__bottom--gallery">
+        <img src="./img/gates1.jpg" alt="gates housing" />
+        <img src="./img/nauticam.jpeg" alt="nauticam housing" />
+        <img src="./img/scubacam.jpg" alt="scubacam housing" />
+        <img src="./img/nauticam2.jpg" alt="nauticam housing" />
+        <img src="./img/gates2.jpg" alt="gates housing" />
+        <img src="./img/nauticam3.jpg" alt="nauticam housing" />
       </div>
-      <div>
-        <ul>
-          <li>Full Camera Surface control</li>
-          <li>Surface Lens Control (Preston/Hi5)</li>
-          <li>Surface Video feed</li>
-          <li>Dome and Flat Ports</li>
-          <li>Wide lens choice</li>
-          <li>Underwater Communication</li>
-          <li>Underwater Lights (Par 1.2 and Underwater Astera Titans)</li>
-        </ul>
+      <div class="underwater-equipment__bottom--info">
+        <div class="underwater-equipment__bottom--info__section">
+          <h3>Features</h3>
+          <ul>
+            <li>Full Camera Surface control</li>
+            <li>Surface Lens Control (Preston/Hi5)</li>
+            <li>Surface Video feed</li>
+            <li>Dome and Flat Ports</li>
+            <li>Wide lens choice</li>
+            <li>Underwater Communication</li>
+            <li>Underwater Lights (Par 1.2 and Underwater Astera Titans)</li>
+          </ul>
+        </div>
+        <div class="underwater-equipment__bottom--info__section">
+          <h3>Supported Cameras</h3>
+          <ul>
+            <li>ARRI ALEXA 35</li>
+            <li>ARRI ALEXA MINI LF</li>
+            <li>ARRI ALEXA MINI</li>
+            <li>VENICE 1 & 2</li>
+            <li>Phantom</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -193,7 +204,7 @@ import Layout from "../../layouts/Layout.astro";
       display: flex;
       &-card {
         position: relative;
-        width: 50%;
+        width: 100%;
         h3 {
           position: absolute;
           left: 50%;
@@ -208,7 +219,56 @@ import Layout from "../../layouts/Layout.astro";
         img {
           width: 100%;
           height: 100%;
+          object-fit: cover;
           filter: brightness(60%);
+        }
+      }
+    }
+  }
+
+  .underwater-equipment {
+    background-color: var(--colorDark);
+    background-image: url(../img/black-twill.png);
+    border-top: 1px solid var(--colorLight);
+    border-bottom: 1px solid var(--colorLight);
+    padding: var(--spacer--sm);
+    &__top {
+      display: flex;
+      justify-content: space-around;
+      padding: var(--spacer--md);
+      gap: var(--spacer--sm);
+
+      img {
+        filter: brightness(95%);
+        max-width: 400px;
+        width: 100%;
+      }
+    }
+
+    &__bottom {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacer--sm);
+      &--gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        img {
+          width: 100%;
+          filter: brightness(80%);
+        }
+      }
+
+      &--info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: var(--spacer--sm);
+
+        &__section {
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          gap: 0.5rem;
         }
       }
     }
@@ -216,11 +276,18 @@ import Layout from "../../layouts/Layout.astro";
 
   @media screen and (max-width: 768px) {
     .equipment__top-x {
-      height: 20vh;
+      height: 30vh;
 
-      h2 {
-        font-size: var(--fontM);
+      h3 {
+        font-size: var(--fontL);
       }
+    }
+
+    .equipment__mid-text h3 {
+      font-size: var(--fontL);
+    }
+    .underwater-equipment__bottom--gallery {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
@@ -231,6 +298,20 @@ import Layout from "../../layouts/Layout.astro";
 
     .equipment__top-t {
       flex-wrap: wrap;
+    }
+
+    .equipment__bottom {
+      flex-wrap: wrap;
+    }
+    .underwater-equipment__top {
+      flex-wrap: wrap;
+      img {
+        max-width: 200px;
+      }
+    }
+
+    .underwater-equipment__bottom--gallery {
+      grid-template-columns: 1fr;
     }
   }
 </style>

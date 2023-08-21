@@ -1,21 +1,19 @@
 <footer class="footer">
-  <div class="logo">
-    <a href="/"><img src="./img/logo.png" alt="logo" /></a>
-    <span>ADF-SOC</span>
+  <div class="footer__left">
+    <div class="footer__left-logo">
+      <a href="/"><img src="./img/logo.png" alt="logo" /></a>
+      <span>ADF-SOC</span>
+    </div>
+    <div class="footer__left-social">
+      <a href="https://www.imdb.com/name/nm0581764/" target="_blank"
+        ><img src="./img/imdb-logo.png" alt="imdb logo" /></a
+      >
+      <a href="https://soc.org/" target="_blank"
+        ><img src="./img/soc-logo.png" alt="soc logo" /></a
+      >
+    </div>
   </div>
-  <div class="footer__social">
-    <a href="https://www.instagram.com/mats_mess/" target="_blank"
-      ><i class="fa-brands fa-square-instagram"></i></a
-    >
-    <a href="https://www.facebook.com/mats.mess" target="_blank"
-      ><i class="fa-brands fa-square-facebook"></i></a
-    >
-    <a
-      href="https://www.imdb.com/name/nm0581764/?ref_=fn_al_nm_1"
-      target="_blank"><img src="./img/imdb.svg" alt="imdb" /></a
-    >
-  </div>
-  <p class="footer__copy">&copy; Copyright Matias Mesa 2022</p>
+  <p class="footer__copy">&copy; Matías Mesa 2023</p>
 </footer>
 
 <style lang="scss">
@@ -24,46 +22,48 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding: var(--spacer--md);
     background-color: var(--colorDark);
     background-image: url(../img/black-twill.png);
     border-top: 2px solid var(--colorLight);
-    &__social {
+    &__left {
       display: flex;
       align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
       gap: var(--spacer--md);
-      a {
-        transition: var(--transition);
-        &:hover {
-          transform: translateY(-4px);
+
+      &-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        a {
+          img {
+            max-width: 180px;
+          }
         }
-        i {
-          font-size: 3rem;
+        span {
+          color: #ff1a16;
+          text-shadow: var(--text--shadow-a);
+          font-size: var(--fontS);
+          font-weight: 600;
         }
+      }
+
+      &-social {
+        display: flex;
+        align-items: center;
+        gap: var(--spacer--sm);
+
         img {
-          display: block;
+          max-width: 50px;
         }
       }
     }
     &__copy {
       font-size: 0.8rem;
-    }
-  }
-  .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    a {
-      img {
-        max-width: 180px;
-      }
-    }
-    span {
-      color: #ff1a16;
-      text-shadow: var(--text--shadow-a);
-      font-size: var(--fontS);
-      font-weight: 600;
     }
   }
 

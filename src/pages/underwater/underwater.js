@@ -3,13 +3,13 @@ export const underwater = [
     id: 1,
     title: "SPA Circle of Life",
     img: "./img/spa.jpg",
-    link: "https://www.youtube.com/watch?v=h-a0XyViRPQ?mute=0",
+    link: "https://youtu.be/G2RL0mT4b6c?mute=0",
   },
   {
     id: 2,
     title: "Apple Watch Series 2",
     img: "./img/applewatch.jpg",
-    link: "https://www.youtube.com/watch?v=N3QMTDACb5Y",
+    link: "https://www.youtube.com/watch?v=N3QMTDACb5Y?mute=0",
   },
   {
     id: 3,
