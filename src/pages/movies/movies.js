@@ -82,6 +82,15 @@ export const movies = [
   },
   {
     id: 10,
+    title: "Victoria Secret - The Tour",
+    prod: "24/7 - Pulse",
+    dir: "Lola Raban Oliva",
+    dp: "Ari Wegner",
+    img: "../img/doja.jpg",
+    link: "https://www.youtube.com/watch?v=LCE522ImLwo?mute=0",
+  },
+  {
+    id: 11,
     title: "Monster, The Jeffrey Dahmer Story",
     prod: "Ryan Murphy Productions",
     dir: "Paris Barclay",
@@ -90,7 +99,7 @@ export const movies = [
     link: "https://www.youtube.com/watch?v=4549vhvWFo8?mute=0",
   },
   {
-    id: 11,
+    id: 12,
     title: "Tom Clancy's Jack Ryan S2",
     prod: "Genre Artist",
     dir: "Andrew Bernstein",
@@ -99,7 +108,7 @@ export const movies = [
     link: "https://www.youtube.com/watch?v=Un2zXkM-03U?mute=0",
   },
   {
-    id: 12,
+    id: 13,
     title: "Riviera",
     prod: "Archery Pictures",
     dir: "Paul Walker",
@@ -108,7 +117,7 @@ export const movies = [
     link: "https://youtu.be/EKP8tC1oSbw?mute=0",
   },
   {
-    id: 13,
+    id: 14,
     title: "Okja",
     prod: "Netflix",
     dir: "Bong Joon Ho",
@@ -117,7 +126,7 @@ export const movies = [
     link: "https://www.youtube.com/watch?v=AjCebKn4iic?mute=0",
   },
   {
-    id: 14,
+    id: 15,
     title: "Honey Boy",
     prod: "Automatik / Amazon Studios",
     dir: "Alma Har'el",
@@ -126,7 +135,7 @@ export const movies = [
     link: "https://www.youtube.com/watch?v=5RR8WTQzwSk?mute=0",
   },
   {
-    id: 15,
+    id: 16,
     title: "Replicas",
     prod: "Replicas Holdings",
     dir: "Jeffrey Nachmanoff",
@@ -135,7 +144,7 @@ export const movies = [
     link: "https://www.youtube.com/watch?v=ciqeJ7SBRdQ?mute=0",
   },
   {
-    id: 16,
+    id: 17,
     title: "Triple Nine",
     prod: "Worldview Entertainment",
     dir: "John Hillcoat",
@@ -144,7 +153,7 @@ export const movies = [
     link: "https://www.youtube.com/watch?v=vOFqiwmnOYE?mute=0",
   },
   {
-    id: 17,
+    id: 18,
     title: "The Games Maker",
     prod: "Pampa Films / Walt Disney",
     dir: "Juan Pablo Buscarini",
@@ -153,7 +162,7 @@ export const movies = [
     link: "https://www.youtube.com/watch?v=F66dsn_NLqo?mute=0",
   },
   {
-    id: 18,
+    id: 19,
     title: "And soon the darkness",
     prod: "Abandon Pictures",
     dir: "Marcos Effron",
@@ -162,7 +171,7 @@ export const movies = [
     link: "https://www.youtube.com/watch?v=GO8BZF_yNBA?mute=0",
   },
   {
-    id: 19,
+    id: 20,
     title: "There be dragons",
     prod: "Independent",
     dir: "Roland Joffe",
@@ -171,7 +180,7 @@ export const movies = [
     link: "https://www.youtube.com/watch?v=kWVy91GzfsU?mute=0",
   },
   {
-    id: 20,
+    id: 21,
     title: "The Informers",
     prod: "Senator Film Produktion",
     dir: "Gregor Jordan",
@@ -180,7 +189,7 @@ export const movies = [
     link: "https://www.youtube.com/watch?v=HxkvJkSIOGk?mute=0",
   },
   {
-    id: 21,
+    id: 22,
     title: "Camp Hell",
     prod: "Holedigger Films",
     dir: "George VanBuskirk",
@@ -189,7 +198,7 @@ export const movies = [
     link: "https://www.youtube.com/watch?v=A5H5KZcCuDw&t=1s?mute=0",
   },
   {
-    id: 22,
+    id: 23,
     title: "The city of your final destination",
     prod: "Merchant Ivory Productions",
     dir: "James Ivory",
@@ -198,7 +207,7 @@ export const movies = [
     link: "https://www.youtube.com/watch?v=ZZSf79c8lcU?mute=0",
   },
   {
-    id: 23,
+    id: 24,
     title: "El Pasado",
     prod: "HB Films, Oscar Kramer",
     dir: "Hector Babenco",
@@ -207,7 +216,7 @@ export const movies = [
     link: "https://www.youtube.com/watch?v=Aj2qrt1oyos&t=23s?mute=0",
   },
   {
-    id: 24,
+    id: 25,
     title: "El Aura",
     prod: "Patagonik Films, Tornasol",
     dir: "Fabian Bielinsky",
@@ -216,7 +225,7 @@ export const movies = [
     link: "https://www.youtube.com/watch?v=aJpAJCBHwjY?mute=0",
   },
   {
-    id: 25,
+    id: 26,
     title: "El Custodio",
     prod: "Rizoma Films, Primer Plano",
     dir: "Rodrigo Moreno",
@@ -225,7 +234,7 @@ export const movies = [
     link: "https://www.youtube.com/watch?v=UKYLsserHMw?mute=0",
   },
   {
-    id: 26,
+    id: 27,
     title: "Blessed by Fire",
     prod: "UN SAM, Canal+, IN CAA",
     dir: "Tristan Bauer",
@@ -234,7 +243,7 @@ export const movies = [
     link: "https://www.youtube.com/watch?v=c3Pyou7P4DU?mute=0",
   },
   {
-    id: 27,
+    id: 28,
     title: "Water",
     prod: "Bambu, Archipel 35",
     dir: "Veronica Chen",
@@ -243,7 +252,7 @@ export const movies = [
     link: "https://www.youtube.com/watch?v=Ln0wI51hpZI?mute=0",
   },
   {
-    id: 28,
+    id: 29,
     title: "Whiskey, Romeo, Zulu",
     prod: "Aquafilms",
     dir: "Enrique Pineyro",
@@ -252,7 +261,7 @@ export const movies = [
     link: "https://www.youtube.com/watch?v=BZWm5ghcrxM?mute=0",
   },
   {
-    id: 29,
+    id: 30,
     title: "The Whore & The Whale",
     prod: "Patagonik, Wanda Vision",
     dir: "Luis Puenzo",
@@ -261,7 +270,7 @@ export const movies = [
     link: "https://www.youtube.com/watch?v=tW9obud1YOA?mute=0",
   },
   {
-    id: 30,
+    id: 31,
     title: "Nine Queens",
     prod: "Patagonik, Sony Pictures",
     dir: "Fabian Bielinsky",
@@ -270,7 +279,7 @@ export const movies = [
     link: "https://www.youtube.com/watch?v=P63PyjeDoKk?mute=0",
   },
   {
-    id: 31,
+    id: 32,
     title: "The walking dead - S10",
     prod: "AMC",
     dir: "Greg Nikotero",
@@ -279,7 +288,7 @@ export const movies = [
     link: "https://www.youtube.com/watch?v=DB8x81nL8B0?mute=0",
   },
   {
-    id: 32,
+    id: 33,
     title: "Operation Finale",
     prod: "MGM",
     dir: "Chris Weitz",
@@ -288,21 +297,12 @@ export const movies = [
     link: "https://www.youtube.com/watch?v=07Y4_6PD0Z4?mute=0",
   },
   {
-    id: 33,
+    id: 34,
     title: "Beyond Sleep",
     prod: "Key Films",
     dir: "Boudewijn Koole",
     dp: "Melle van Essen",
     img: "../img/beyond-sleep.jpg",
     link: "https://www.youtube.com/watch?v=TtmYZ-mjEX0?mute=0",
-  },
-  {
-    id: 34,
-    title: "The Tour - 2023",
-    prod: "#",
-    dir: "#",
-    dp: "#",
-    img: "../img/doja.jpg",
-    link: "https://www.youtube.com/watch?v=LCE522ImLwo?mute=0",
   },
 ];

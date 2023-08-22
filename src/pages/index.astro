@@ -28,9 +28,7 @@ import Layout from "../layouts/Layout.astro";
       url(../img/facha.jpeg);
 
     &-texto {
-      position: fixed;
       padding: var(--spacer--md);
-
       h1 {
         font-size: var(--fontXXL2);
       }
@@ -40,78 +38,6 @@ import Layout from "../layouts/Layout.astro";
         text-shadow: var(--text--shadow-a);
         margin-top: 4px;
         font-size: var(--fontM);
-      }
-    }
-  }
-
-  // Work
-  .work-container {
-    background-color: var(--colorDark);
-    background-image: url(../img/black-twill.png);
-    height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: var(--spacer--sm);
-    border-top: var(--border);
-    border-bottom: var(--border);
-    z-index: 1;
-    position: relative;
-
-    .work {
-      gap: var(--spacer--sm);
-      display: flex;
-      width: 100%;
-      height: 100%;
-      &__card {
-        width: 0px;
-        flex-grow: 1;
-        transition: 0.5s ease;
-        position: relative;
-        overflow: hidden;
-        &:hover {
-          cursor: pointer;
-          width: 300px;
-        }
-        &-img {
-          img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.8;
-            transition: 0.5s ease;
-
-            &:hover {
-              opacity: 1;
-              filter: contrast(110%);
-            }
-          }
-        }
-        h2 {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          text-shadow: var(--text--shadow-b);
-        }
-      }
-    }
-  }
-
-  @media screen and (max-width: 890px) {
-    // Work
-    .work-container {
-      height: 100vh;
-      .work {
-        flex-direction: column;
-        &__card {
-          width: 100%;
-          height: 0;
-          &:hover {
-            height: 0;
-            width: 100%;
-          }
-        }
       }
     }
   }

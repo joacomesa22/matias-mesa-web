@@ -1,10 +1,10 @@
 <footer class="footer">
-  <div class="footer__left">
-    <div class="footer__left-logo">
+  <div class="footer__top">
+    <div class="footer__top-logo">
       <a href="/"><img src="./img/logo.png" alt="logo" /></a>
       <span>ADF-SOC</span>
     </div>
-    <div class="footer__left-social">
+    <div class="footer__top-icons">
       <a href="https://www.imdb.com/name/nm0581764/" target="_blank"
         ><img src="./img/imdb-logo.png" alt="imdb logo" /></a
       >
@@ -13,26 +13,56 @@
       >
     </div>
   </div>
-  <p class="footer__copy">&copy; Matías Mesa 2023</p>
+  <div class="footer__contact">
+    <div class="footer__contact-info">
+      <span>Contact:</span>
+      <a href="mailto:matiasmesa@mac.com" target="_blank">
+        <p>matiasmesa@mac.com</p>
+      </a>
+      <p>Madrid, Spain</p>
+      <!-- <p>Member Local 600</p> -->
+    </div>
+    <div class="footer__contact-info">
+      <span>Agent:</span>
+      <a href="mailto:rta@russelltoddagency.com" target="_blank">
+        <p>rta@russelltoddagency.com</p>
+      </a>
+      <a href="tel:+1 8189851130" target="_blank">
+        <p>+1 818 985 1130</p>
+      </a>
+    </div>
+  </div>
+  <div class="footer__social">
+    <a href="https://www.instagram.com/mats_mess/" target="_blank">
+      <img src="./img/instagram.png" alt="logo instagram" />
+    </a>
+    <a href="https://www.facebook.com/mats.mess" target="_blank">
+      <img src="./img/facebook.png" alt="logo facebook" />
+    </a>
+    <a href="#" target="_blank">
+      <img src="./img/linkedin.png" alt="logo linkedin" />
+    </a>
+  </div>
+  <p class="footer__copy">&copy; 2023 Matías Mesa</p>
 </footer>
 
 <style lang="scss">
   // Footer
   .footer {
     display: flex;
+    gap: var(--spacer--sm);
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
     padding: var(--spacer--md);
     background-color: var(--colorDark);
     background-image: url(../img/black-twill.png);
     border-top: 2px solid var(--colorLight);
-    &__left {
+    &__top {
       display: flex;
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
-      gap: var(--spacer--md);
+      gap: var(--spacer--sm);
 
       &-logo {
         display: flex;
@@ -52,7 +82,7 @@
         }
       }
 
-      &-social {
+      &-icons {
         display: flex;
         align-items: center;
         gap: var(--spacer--sm);
@@ -62,8 +92,43 @@
         }
       }
     }
+
+    &__contact {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--spacer--md);
+
+      &-info {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        p {
+          font-size: var(--fontXS);
+          opacity: 0.8;
+        }
+
+        span {
+          font-size: var(--fontS);
+          font-weight: 600;
+        }
+      }
+    }
+
+    &__social {
+      display: flex;
+      gap: 1rem;
+      padding-top: 10px;
+
+      a > img {
+        max-width: 24px;
+      }
+    }
     &__copy {
+      opacity: 0.8;
       font-size: 0.8rem;
+      text-align: center;
     }
   }
 
@@ -72,7 +137,11 @@
     .footer {
       flex-direction: column;
       text-align: center;
-      gap: var(--spacer--md);
+      gap: var(--spacer--sm);
+    }
+
+    .footer__contact {
+      flex-wrap: wrap;
     }
   }
 </style>

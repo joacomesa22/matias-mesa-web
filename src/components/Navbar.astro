@@ -4,11 +4,11 @@
     <span>ADF-SOC</span>
   </div>
   <nav class="nav">
+    <a href="/featured" class="nav__link nav__link-feat">Featured</a>
     <a href="/commercials" class="nav__link">Commercials</a>
     <a href="/movies" class="nav__link">Movies</a>
     <a href="/underwater" class="nav__link">Underwater</a>
     <a href="/equipment" class="nav__link">Equipment</a>
-    <a href="/featured" class="nav__link">Featured</a>
   </nav>
   <div class="nav-right">
     <div class="btn">
@@ -87,6 +87,7 @@
     display: flex;
     align-items: center;
     gap: var(--spacer--sm);
+
     &__link {
       margin-top: 8px;
       font-size: var(--fontXS);
@@ -103,6 +104,26 @@
       }
       &:hover {
         --clippy: polygon(0 0, 100% 0, 100% 99%, 0 100%);
+      }
+
+      &-feat {
+        position: relative;
+        text-shadow: var(--text--shadow-a);
+        &::before {
+          content: "";
+          background-color: #ff1a16;
+          position: absolute;
+          left: 0;
+          bottom: 3px;
+          width: 100%;
+          height: 8px;
+          z-index: -1;
+          transition: all 0.3s ease-in-out;
+        }
+        &:hover::before {
+          bottom: 0;
+          height: 100%;
+        }
       }
     }
   }
