@@ -28,7 +28,11 @@ export const Gallery2 = ({ content, bgBlue }) => {
             key={item.id}
           >
             <div className="portfolio__card-img">
-              <img src={item.img} alt={item.title.toLowerCase()} />
+              <img
+                src={item.img}
+                alt={item.title.toLowerCase()}
+                loading="lazy"
+              />
             </div>
             <div className="portfolio__card-text">
               <h4>{item.title}</h4>
